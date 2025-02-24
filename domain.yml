@@ -1,0 +1,44 @@
+version: "3.1"
+
+intents:
+  - product_search
+  - faq_inquiry
+  - order_tracking
+  - general_chat
+  - fallback
+
+entities:
+  - product
+  - order_id
+
+responses:
+  utter_product_search:
+    - text: "Here are some options for wireless headphones under $100:
+             1. Sony WH-CH510 - Lightweight with great sound quality.
+             2. JBL Tune 500BT - Comfortable fit with long battery life.
+             3. Anker Soundcore Life Q10 - Affordable with deep bass."
+  utter_order_tracking:
+    - text: "Your order # 12345 is currently in transit and is expected to arrive by January 20th. Thank you for shopping with us!"
+  utter_faq_inquiry:
+    - text: "Our return policy allows items to be returned within 30 days of purchase. Let me know if you need more details!"
+  utter_general_chat:
+    - text: "Hello! How can I help you today?"
+  utter_default_fallback:
+    - text: "I'm sorry, I didn't quite get that. Can you please clarify?"
+
+slots:
+  order_id:
+    type: text
+    mappings:
+      - type: from_text
+
+actions:
+  - action_product_search
+  - action_faq_inquiry  
+  - action_order_tracking   
+  - action_general_chat     
+  - action_default_fallback
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

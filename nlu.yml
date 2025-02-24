@@ -1,0 +1,32 @@
+
+version: "3.1"
+nlu:
+  - intent: product_search
+    examples: |
+      - I'm looking for [wireless headphones](product)
+      - Can you recommend a [smartphone](product) under $500?
+      - Show me [laptops](product) in stock
+  - intent: faq_inquiry
+    examples: |
+      - What is your return policy?
+      - How do I cancel my order?
+      - Do you offer free shipping?
+  - intent: order_tracking
+    examples: |
+      - Where is my order [#12345](order_id)?
+      - Can you track my order [#98765](order_id)?
+      - When will my order [#12345](order_id) be delivered ?
+  
+  - intent: general_chat
+    examples: |
+      - Hi, how are you?
+      - Tell me a joke!
+      - What's up?
+
+  - intent: fallback
+    examples: |
+      - Sorry, I didn't understand.
+      - Can you please clarify that?
+      - I didn't catch that.
+      - Could you please repeat that?
+

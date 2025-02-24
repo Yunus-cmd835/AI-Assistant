@@ -1,0 +1,21 @@
+version: "3.1"
+rules:
+  - rule: product search
+    steps:
+      - intent: product_search
+      - action: utter_product_search
+
+  - rule: faq inquiry
+    steps:
+      - intent: faq_inquiry
+      - action: utter_faq_inquiry
+
+  - rule: order tracking
+    steps:
+      - intent: order_tracking
+      - action: utter_order_tracking
+
+  - rule: Fallback
+    steps:
+      - intent: fallback
+      - action: utter_default_fallback

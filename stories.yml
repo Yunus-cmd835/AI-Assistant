@@ -1,0 +1,27 @@
+version: "3.1"
+stories:
+  - story: product search story
+    steps:
+      - intent: product_search
+      - action: utter_product_search
+
+  - story: faq inquiry story
+    steps:
+      - intent: faq_inquiry
+      - action: utter_faq_inquiry
+
+  - story: order tracking story
+    steps:
+      - intent: order_tracking
+      - action: utter_order_tracking
+
+  - story: general chat story
+    steps:
+      - intent: general_chat
+      - action: utter_general_chat
+
+  - story: Fallback story
+    steps:
+      - intent: fallback
+      - action: utter_default_fallback
+
